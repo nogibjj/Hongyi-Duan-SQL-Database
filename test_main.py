@@ -1,3 +1,5 @@
+"""Unit tests for the CRUD operations in main.py."""
+
 import unittest
 import main
 
