@@ -1,3 +1,5 @@
+"""This module performs CRUD operations on a SQLite database."""
+
 import sqlite3
 
 def connect_to_db(db_name="test.db"):
