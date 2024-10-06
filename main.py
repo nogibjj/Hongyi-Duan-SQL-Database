@@ -6,7 +6,7 @@ def connect_to_db(db_name="test.db"):
     return conn
 
 def create_table(conn):
-    """ Create a sample table """
+    """ Create a sample table in the database """
     query = '''
     CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -24,24 +24,25 @@ def insert_user(conn, name, age):
     conn.commit()
 
 def get_users(conn):
-    """ Retrieve all users """
+    """ Retrieve all users from the users table """
     query = "SELECT * FROM users;"
     cursor = conn.execute(query)
     return cursor.fetchall()
 
 def update_user(conn, user_id, new_age):
-    """ Update a user's age """
+    """ Update the age of an existing user """
     query = "UPDATE users SET age = ? WHERE id = ?;"
     conn.execute(query, (new_age, user_id))
     conn.commit()
 
 def delete_user(conn, user_id):
-    """ Delete a user """
+    """ Delete a user from the users table """
     query = "DELETE FROM users WHERE id = ?;"
     conn.execute(query, (user_id,))
     conn.commit()
 
 def main():
+    """ Main function to execute database operations """
     conn = connect_to_db()
     create_table(conn)
 
