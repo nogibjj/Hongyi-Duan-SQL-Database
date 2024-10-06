@@ -2,8 +2,6 @@
 
 [![Python CI](https://github.com/nogibjj/Hongyi-Duan-SQL-Database/actions/workflows/hello.yml/badge.svg)](https://github.com/nogibjj/Hongyi-Duan-SQL-Database/actions/workflows/hello.yml)
 
-Here's a detailed `README.md` file that you can copy and use for your GitHub project based on your `main.py` and `test_main.py` files, which perform CRUD operations on a SQLite database.
-
 ### README.md
 
 ```markdown
